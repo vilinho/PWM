@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
 
+
 // Configurações do Servo
 const uint16_t pino_servo = 22;
 const float divisor_pwm_servo = 125.0f;    // Divisor de clock para o PWM
