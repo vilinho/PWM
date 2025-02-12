@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "author": "Laisa França",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": 0,
+        "left": 0,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": -30.8, "left": 144, "attrs": {} },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": 92.4,
+        "left": -73,
+        "attrs": { "color": "magenta" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 168,
+        "left": -77.35,
+        "rotate": 90,
+        "attrs": { "value": "330" }
+      }
+    ],
+    "connections": [
+      [ "servo1:GND", "pico:GND.8", "#8f4814", [ "h-38.4", "v12.85" ] ],
+      [ "servo1:V+", "pico:3V3", "red", [ "v0.1", "h-28.8", "v19.2", "h-42.26" ] ],
+      [ "servo1:PWM", "pico:GP22", "orange", [ "h-9.6", "v19.4", "h-48", "v60.85" ] ],
+      [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+      [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+      [ "r1:2", "pico:GP12", "violet", [ "v8.4", "h28.8", "v-83.19" ] ],
+      [ "led1:C", "pico:GND.4", "black", [ "h0.4", "v86.4", "h63.65" ] ],
+      [ "led1:A", "r1:1", "limegreen", [ "h0" ] ]
+    ],
+    "dependencies": {}
+  }
