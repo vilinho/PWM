@@ -1,17 +1,15 @@
-# Controle de Servo Motor e LED com Raspberry Pi Pico
+Este projeto ilustra como controlar um servo motor e um LED utilizando PWM (Modulação por Largura de Pulso) com o Raspberry Pi Pico.
 
-## Descrição
-Este projeto demonstra o controle de um servo motor e um LED usando **PWM (Modulação por Largura de Pulso)** em um Raspberry Pi Pico.
+Funcionamento
+Sequência inicial do servo motor:
 
-## Funcionamento
-1. O programa realiza a seguinte sequência inicial de movimentos do servo: <br>
-- Mover para 180°
-- Mover para 90°
-- Mover para 0°
-- Aguardar 5 segundos entre cada movimento ⏰
+Gira para 180°
+Retorna para 90°
+Movimenta-se para 0°
+Aguarda 5 segundos entre cada posição ⏰
+Loop principal:
 
-2. Iniciar o loop principal onde:
-- O LED fará um efeito fade (acende e apaga suavemente)
-- O servo motor se moverá continuamente entre 0° e 180°
+O LED realiza um efeito de fade (aumentando e diminuindo gradualmente o brilho).
+O servo motor oscila continuamente entre 0° e 180°.
 
---> Vídeo demonstrando o funcionamento do efeito fade na placa física: https://drive.google.com/file/d/1WoNXvtLAKVECvAQ86igmws_YM57H_YGf/view?usp=sharing
+
